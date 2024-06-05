@@ -1,0 +1,6 @@
+<view class="content">
+        <block wx:for="{{logs}}" wx:for-item="log" wx:key="index">
+            <view class="item">{{log}}</view>
+        </block>
+        <button class="clear" bindtap="clearCache"> 清除缓存</button>
+</view>

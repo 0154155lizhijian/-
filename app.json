@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/calc/calc",
+    "pages/history/history"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#da7c0c",
+    "navigationBarTitleText": "曼玉比价小助手",
+    "navigationBarTextStyle":"white"
+  }
+}

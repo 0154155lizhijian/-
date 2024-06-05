@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="btnGroup">
+    <view class="item blue" id="{{id9}}">快速比价</view>
+  </view>
+  <table>
+    <tr>
+      <th>总价</th>
+      <th>数量</th>
+      <th>单价</th>
+    </tr>
+    <block wx:for="{{items}}" wx:key="index">
+      <tr class="{{minPriceIndex === index? 'minStyle' : ''}}">
+        <td><input type="digit" data-index="{{index}}" bindinput="handleTotalChange" value="{{item.total}}"  /></td>
+        <td><input type="digit" data-index="{{index}}" bindinput="handleQuantityChange" value="{{item.quantity}}" /></td>
+        <td><input type="digit" data-index="{{index}}" bindinput="handleUnitPriceChange" value="{{item.unitPrice}}" /></td>
+      </tr>
+    </block>
+  </table>
+  <view class="buttons">
+    <button class="button" bindtap="reset"> 重置</button>
+    <button class="button" bindtap="add"> 新增</button>
+  </view>
+  <view class="btnGroup">
+    <button class="item blue" size="{{primarySize}}" plain="{{plain}}" hover-class="button-hover" bindtap="toCalc"> {{motto}} </button>
+  </view>
+</view>
